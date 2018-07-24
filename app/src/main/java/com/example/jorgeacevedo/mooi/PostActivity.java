@@ -151,7 +151,7 @@ public class PostActivity extends AppCompatActivity {
                     postsMap.put("profileimage", userProfileImage);
                     postsMap.put("fullname", userFullName);
 
-                    PostRef.child(postsMap)
+                    //PostRef.child(postsMap);
                 }
             }
 

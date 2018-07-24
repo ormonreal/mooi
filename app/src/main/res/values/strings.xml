@@ -2,4 +2,7 @@
     <string name="app_name">Mooi</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_closed">Drawer Closed</string>
+    <string name="facebook_app_id">199688690707750</string>
+    <string name="fb_login_protocol_scheme">fb199688690707750</string>
+    <string name="login_error_title">Error!</string>
 </resources>

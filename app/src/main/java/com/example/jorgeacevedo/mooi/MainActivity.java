@@ -9,10 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,8 +24,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
-
-import java.util.Set;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -139,9 +137,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     private void CheckUserExistance() {
 
         final String current_user_id = mAuth.getCurrentUser().getUid();
+
+        Log.d("current user data","Provider: "+mAuth.getCurrentUser().getProviderId()+" id: "+current_user_id+" email: "+mAuth.getCurrentUser().getEmail());
         UserRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
